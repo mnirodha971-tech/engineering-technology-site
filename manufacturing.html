@@ -23,15 +23,16 @@ canvas{width:100%;height:100%;display:block;background:#0b1220;border:1px solid 
 .q{background:var(--p);padding:8px 12px;margin:8px 0;border-radius:6px}.q label{display:block;cursor:pointer}
 section{scroll-margin-top:60px;padding:16px 0;border-bottom:1px solid var(--l)}#c3{touch-action:pan-y}.cv{height:70vh}.pn .bt button{flex:1 1 45%;font-weight:700;padding:10px 6px;font-size:14px;color:#fff}.go,.go:hover{background:#16a34a}.st,.st:hover{background:#dc2626}.au,.au:hover{background:#2563eb}.pa,.pa:hover{background:#d97706}.re,.re:hover{background:#6b7280}.pn .bt button:hover{filter:brightness(1.25);color:#fff}.pn h4{margin:12px 0 4px;color:var(--c);font-size:14px;border-bottom:1px solid var(--l)}.jg{display:grid;grid-template-columns:repeat(3,48px);gap:4px}.jg button{padding:10px 0;font-size:18px}.pn label.k{display:flex;gap:8px;align-items:center;padding:6px;border-radius:6px;background:#13233f;margin:3px 0;cursor:pointer}.pn input[type=checkbox]{width:20px;height:20px;accent-color:#22d3ee}.zb button{font-size:13px;padding:6px 8px}
 :root{color-scheme:light;--bg:#e9f1f9;--p:#fff;--l:#c3d5ea;--c:#0e7490;--t:#10243d;--m:#4a607c}
+:root{--panel-bg:#fff;--panel-soft:#eef4fb;--canvas-bg:#e6eef7;--output-bg:#f1f6fb;--nav-bg:linear-gradient(90deg,#0f5f8a,#2563eb);--nav-button-bg:#ffffff26;--nav-button-color:#fff;--nav-button-border:#ffffff55;--bar-bg:#dbe5f0}
 button.on,button:hover{background:var(--c);color:#fff}
-nav{background:linear-gradient(90deg,#0f5f8a,#2563eb)}nav button{background:#ffffff26;color:#fff;border-color:#ffffff55}nav button.on,nav button:hover{background:#fff;color:#0f5f8a}
+nav{background:var(--nav-bg)}nav button{background:var(--nav-button-bg);color:var(--nav-button-color);border-color:var(--nav-button-border)}nav button.on,nav button:hover{background:#fff;color:#0f5f8a}
 .cd:nth-child(4n+1){border-color:#0e7490}.cd:nth-child(4n+2){border-color:#7c3aed}.cd:nth-child(4n+3){border-color:#ea580c}.cd:nth-child(4n+4){border-color:#16a34a}
 section h2{border-left:5px solid #f59e0b;padding-left:8px}.cd{box-shadow:0 1px 4px #0f5f8a22}
-canvas{background:#e6eef7}#out{background:#f1f6fb}.w{color:#c2410c}.ok{color:#15803d}
-.cv{flex:1 1 100%;height:72vh;min-height:420px}.pn{flex:1 1 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;background:none;padding:0}.gp{background:#fff;border:1px solid var(--l);border-radius:8px;padding:10px}.pn label.k{background:#eef4fb}
+canvas{background:var(--canvas-bg)}#out{background:var(--output-bg)}.w{color:#c2410c}.ok{color:#15803d}
+.cv{flex:1 1 100%;height:72vh;min-height:420px}.pn{flex:1 1 100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;background:none;padding:0}.gp{background:var(--panel-bg);border:1px solid var(--l);border-radius:8px;padding:10px}.pn label.k{background:var(--panel-soft)}
 #dro{position:absolute;left:8px;top:8px;width:200px;background:#0d1f17;border:2px solid #475569;border-radius:8px;padding:6px 8px;font:12px/1.5 ui-monospace,Consolas,monospace;color:#86efac;box-shadow:0 2px 8px #0006}#dro .dr{display:flex;justify-content:space-between;border-bottom:1px solid #14532d}#dro .dr span{color:#4ade80;opacity:.85}#dro b{color:#bbf7d0;font-size:14px}#dro .dt{margin-bottom:4px;font-weight:700}.lg{color:#4ade80}.rd{color:#f87171}.bl{color:#60a5fa}.gy{color:#9ca3af}
 @media(max-width:600px){#dro{width:150px;font-size:11px}#dro b{font-size:12px}}
-.qo{display:block;width:100%;text-align:left;margin:4px 0;white-space:normal;background:#eef4fb}.qo.good{background:#16a34a;color:#fff}.qo.bad{background:#dc2626;color:#fff}.qo:disabled{opacity:1;cursor:default}.ex{font-size:14px;margin-top:4px}
+.qo{display:block;width:100%;text-align:left;margin:4px 0;white-space:normal;background:var(--panel-soft)}.qo.good{background:#16a34a;color:#fff}.qo.bad{background:#dc2626;color:#fff}.qo:disabled{opacity:1;cursor:default}.ex{font-size:14px;margin-top:4px}
 
 .stage{flex:1 1 100%;min-width:0;position:relative}
 .zb{left:50%;right:auto;transform:translateX(-50%)}
@@ -40,13 +41,18 @@ canvas{background:#e6eef7}#out{background:#f1f6fb}.w{color:#c2410c}.ok{color:#15
 .ov .gp{padding:8px;font-size:13px}.ov h4{margin:0 0 4px}.ov label{line-height:1.25;font-size:12px}.ov input[type=range]{margin:0;height:16px}
 .pn.ov .bt button{padding:7px 4px;font-size:13px}
 .rr{display:flex;justify-content:space-between;align-items:baseline;font-size:13px;margin-top:5px}.rr span{color:var(--m)}.rr b{font-size:14px}
-.bar{height:6px;background:#dbe5f0;border-radius:3px;overflow:hidden}.bar i{display:block;height:100%;border-radius:3px;transition:width .2s}
-.wn{background:#fff1e6;color:#c2410c;border-left:3px solid #ea580c;padding:3px 6px;margin-top:5px;font-size:12px;border-radius:3px;font-weight:700}.wn.okk{background:#e8f8ee;color:#15803d;border-color:#16a34a}
-@media(min-width:1000px){.pn.ov{position:absolute;top:8px;margin:0;max-height:max(404px,calc(72vh - 16px));overflow:auto;z-index:2}.ovl{left:8px;width:250px}.ovr{right:8px;width:300px}.stage{flex:none;width:var(--vw,100vw);margin-left:calc(50% - var(--vw,100vw)/2)}.ov .gp{background:#ffffffe8}}
+.bar{height:6px;background:var(--bar-bg);border-radius:3px;overflow:hidden}.bar i{display:block;height:100%;border-radius:3px;transition:width .2s}
+.wn{background:var(--warn-bg,#fff1e6);color:var(--warn-text,#c2410c);border-left:3px solid #ea580c;padding:3px 6px;margin-top:5px;font-size:12px;border-radius:3px;font-weight:700}.wn.okk{background:var(--ok-bg,#e8f8ee);color:var(--ok-text,#15803d);border-color:#16a34a}
+@media(min-width:1000px){.pn.ov{position:absolute;top:8px;margin:0;max-height:max(404px,calc(72vh - 16px));overflow:auto;z-index:2}.ovl{left:8px;width:250px}.ovr{right:8px;width:300px}.stage{flex:none;width:var(--vw,100vw);margin-left:calc(50% - var(--vw,100vw)/2)}.ov .gp{background:var(--panel-bg)}}
 body{overflow-x:clip}
 .pn.ov{scrollbar-width:thin;user-select:none}.ov .gp{padding:7px 8px}.ov .pn label,.pn.ov label{margin:0 0 3px}
 #dro .dr{white-space:nowrap;overflow:hidden}#dro .dt{white-space:nowrap}
 .rr{margin-top:3px;font-size:12.5px}.rr b{font-size:13.5px}.bar{height:5px}.wn{margin-top:3px;padding:2px 6px}
+.theme-toggle{margin-left:auto;flex:0 0 auto}.theme-toggle[aria-pressed=true]{background:#22d3ee;color:#041018;border-color:#22d3ee}
+:root[data-theme=dark]{color-scheme:dark;--bg:#070d1a;--p:#0f1b33;--l:#1e3a5f;--c:#22d3ee;--t:#e2e8f0;--m:#94a3b8;--panel-bg:#0f1b33;--panel-soft:#13233f;--canvas-bg:#0b1220;--output-bg:#050a14;--nav-bg:#0f1b33;--nav-button-bg:#1e3a5f;--nav-button-color:#e2e8f0;--nav-button-border:#2b5282;--bar-bg:#1e3a5f;--warn-bg:#3a201d;--warn-text:#ff8f80;--ok-bg:#15302a;--ok-text:#4fd8b0}
+:root[data-theme=dark] nav button.on,:root[data-theme=dark] nav button:hover{background:#22d3ee;color:#041018}
+:root[data-theme=dark] .ov .gp{background:#0f1b33f2}
+:root[data-theme=dark] .w{color:#fb923c}:root[data-theme=dark] .ok{color:#4ade80}
 </style></head><body>
 <nav id="nav"></nav><main>
 <section id="home"><h1>ඉංජිනේරු තාක්ෂණවේදය (Engineering Technology) - 8 වන පාඩම</h1>
@@ -65,6 +71,14 @@ body{overflow-x:clip}
 <script>
 const $=i=>document.getElementById(i);
 const SEC=[['home','මුල් පිටුව'],['props','ද්‍රව්‍ය ගුණ'],['mach','යන්ත්‍ර'],['form','ලෝහ හැඩගැන්වීම'],['join','සම්බන්ධකරණ'],['cnc','CNC'],['lathe','3D ලේත් ප්‍රායෝගිකය'],['sim','2D Simulations'],['gloss','ශබ්දකෝෂය'],['quiz','ප්‍රශ්නාවලි']];
+const themeKey='et-lesson-8-theme';
+const themeButton=document.createElement('button');
+themeButton.type='button';
+themeButton.className='theme-toggle';
+themeButton.setAttribute('aria-label','පසුබිම් වර්ණය මාරු කරන්න');
+function setTheme(theme){document.documentElement.dataset.theme=theme;themeButton.textContent=theme==='dark'?'☀️ සුදු පසුබිම':'🌙 තද පසුබිම';themeButton.setAttribute('aria-pressed',String(theme==='dark'));localStorage.setItem(themeKey,theme)}
+setTheme(localStorage.getItem(themeKey)==='dark'?'dark':'light');
+themeButton.onclick=()=>setTheme(document.documentElement.dataset.theme==='dark'?'light':'dark');
 const DATA={
 props:['ද්‍රව්‍යවල ගුණ (Properties of Materials)',[
 ['ඝනත්වය (Density)','ඒකක පරිමාවක ස්කන්ධය (kg/m³). ඇලුමිනියම් සැහැල්ලුයි; ඊයම් බරයි.'],
@@ -131,6 +145,7 @@ let lathe=null;
 function show(id){SEC.forEach(s=>$(s[0]).hidden=s[0]!=id);[...$('nav').children].forEach(b=>b.classList.toggle('on',b.dataset.i==id));
  if(id=='lathe'){if(!lathe)lathe=initLathe();lathe.on=true}else if(lathe)lathe.on=false;sim2.on=id=='sim'}
 SEC.forEach(s=>{const b=document.createElement('button');b.textContent=s[1];b.dataset.i=s[0];b.onclick=()=>show(s[0]);$('nav').appendChild(b)});
+$('nav').appendChild(themeButton);
 /* ---------- 2D simulations ---------- */
 const T2={drill:['විදින යන්ත්‍රය (Drilling)','Drill bit භ්‍රමණය වෙමින් පහළට ගොස් සිදුරක් සාදයි. Feed වැඩි කළොත් bit එකට හානි විය හැක.'],
 mill:['මිලින් (Milling)','වැඩ මේසය ගමන් කරන අතර භ්‍රමණය වන Cutter එකෙන් ඛාංඩයක් (Slot) කැපේ.'],
